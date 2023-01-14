@@ -206,8 +206,9 @@ h3{
 
 @media screen and (max-width: 600px){
     #header{
-        font-size: 35px;
+        font-size: 25px;
         padding: 40px;
+        margin-top: 10%;
     }
     .navbar{
         
