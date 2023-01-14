@@ -46,13 +46,13 @@ body{
     
 
     background: linear-gradient(90deg, #eaeaea, #d3d3d3, #bbbbbb, #a4a4a4);
-    background-size: 400% 400%;
+    background-size: cover;
     /* -webkit-animation: gradientBackground 15s ease infinite; */
-    animation: gradientBackground 20s ease infinite;
+    /* animation: gradientBackground 20s ease infinite; */
 
 }
 
-@-webkit-keyframes gradientBackground {
+/* @-webkit-keyframes gradientBackground {
     0% {
       background-position: 0% 50%;
     }
@@ -62,7 +62,7 @@ body{
     100% {
       background-position: 0% 50%;
     }
-  }
+  } */
 
 
 .totop {
