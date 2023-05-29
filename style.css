@@ -37,6 +37,7 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 16px;
 }
 body{
     margin:0;
@@ -46,14 +47,16 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /* max-width: 100vw; */
     overflow-x: hidden;
-    /* -webkit-animation: gradientBackground 15s ease infinite; */
-    /* animation: gradientBackground 20s ease infinite; */
+    /* animation-name: gradientAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;  */
+    
 
 }
 
-/* @-webkit-keyframes gradientBackground {
+/* @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
     }
@@ -66,7 +69,7 @@ body{
   } */
 
 .main {
-    /* max-width: 100vh; */
+    max-width: 100vw;
 }
 
 /*-----------------------------------------------------*/
@@ -92,15 +95,15 @@ body{
   }
   
   .resume a img {
-    height: 30%; 
-    width: 30%;
+    height: 35%; 
+    width: 35%;
     border: 1px solid rgba(102, 50, 153, 1);
     border-radius: 5px;
     transition: transform 0.3s;
   }
   
   .resume a img:hover, :focus {
-    transform: scale(2.5); 
+    transform: scale(2.3); 
   }
   
   
@@ -129,14 +132,9 @@ body{
     border: 1px solid #a4a4a4;
 }
 
-/* .totop:active, .totop:focus {
-   
-  transform: scale(1);
-} */
-
 .navbar{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -148,11 +146,13 @@ body{
 
 
 
-.button_container .navb {
-    margin:10px;
+.button_container .navb
+ {
+    margin:.6rem;
+    padding: 0 1.8rem;
     border: 1px solid rgba(102, 50, 153, 1);
     color: #2f2f2f;
-    border-radius: 4px;
+    border-radius: 5px;
     transition: 0.1s;
     cursor: pointer;
 }
@@ -166,74 +166,52 @@ body{
     color: white;
 }
 
-/* .resbutton:hover, :focus {
-    transform:scale(1.3);
-    transition: 1s;
-    background-color: rgba(102, 50, 153, 1);
-    color: white;
-} */
-
 .name{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100vw;
 }
-
+.logo_container {
+    display: flex;
+    justify-content: center;
+}
 .logo_container .logo {
-    /* position: fixed; */
-    width: 125px;
-    height: 125px;
-    margin-top: 3rem;;
-    /* top: 20px;
-    left: 30px;  */
+    width: 14%;
+    height: 14%;
+    margin-top: 3%;
     transition: transform 1s;
 }
 
 .logo_container .logo:hover {
     transform: scale(1.5) rotate(1turn);
-    /* transform: rotate(-.2turn) */
-    /* animation: bounce 1s; */
 }
-
-/* @keyframes bounce {
-    0% {
-        transform: rotate(0deg);
-      }
-      45% {
-        transform: rotate(400deg);
-      }
-      55% {
-        transform: rotate(380deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-  } */
 
 #header{
     text-align: center;
     font-size: 7.5rem;
     font-family: sourceCodePro;
-    margin-top: 0;
+    margin: 0rem;
+    padding: 0rem;
     
     
 }
-h3{
+#about, #resume, #skills, #projects, #contact{
     text-align: center;
     font-size: 4.68rem;
     
 }
-.subtitle{
+#subtitle{
     text-align: center;
-    margin-top: -3.75rem;
+    /* margin-top: -3.75rem; */
     font-size: 3.2rem;
 
 }
 .about{
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 20px;
     /* margin-top: -40px; */
     font-size: 1.5rem;
@@ -242,7 +220,7 @@ h3{
     
     display: flex;
     
-    height: 9.37;
+    height: fit-content;
     justify-content: center;
 
 }
@@ -251,7 +229,7 @@ h3{
     /* max-height:70%; */
     height: auto;
     object-fit: contain;
-    padding: 1.5rem;
+    padding: 1.2rem;
     transition: transform 0.1s;
 }
 
@@ -270,7 +248,7 @@ h3{
     transition: transform 0.1s;
     cursor: pointer;
     height: auto;
-    object-fit: contain;
+    /* object-fit: contain; */
     
 }   
 .contact a{
@@ -285,30 +263,26 @@ h3{
     margin-bottom: 3rem;
     font-size: 1.5rem;
 }
-
-.resbutton{
-    cursor: pointer;
-}
-
 .project{
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     text-align: center;
-    /* width: fit-content; */
-    /* max-width: 100vh; */
-    /* overflow-x: hidden; */
-    
-
+    max-width: 100vw;
+   
 }
 .project img{
-    height: 15.6rem;
-    /* margin: 0 5rem 0 5rem; */
+    width: 80%;
+    margin: 0 3rem;
     transition: 0.3s;
     border: 1px solid rgba(102, 50, 153, 1);
     border-radius: 5px;
     transition: transform 0.3s;
 }
+/* .projectname {
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+} */
 .project img:hover, :focus{
     transform: scale(1.7);
     }
@@ -317,82 +291,278 @@ h3{
 /*------------------MOBILE-DEVICES---------------------*/
 /*-----------------------------------------------------*/
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1019.99px) and (min-width: 660px) {
+    html {
+        font-size: 15px;
+    }
+    
+    #header{
+        font-size:4.5rem;
+        
+    }
+    #subtitle{
+        font-size: 2.12rem;
+    }
+    #about, #resume, #skills, #projects, #contact{
+        text-align: center;
+        font-size: 2.68rem;
+    }
+    .about {
+        /* margin: 2rem; */
+    }
+    .resume a img {
+        height: 75%; 
+        width: 75%;
+        border: 1px solid rgba(102, 50, 153, 1);
+        border-radius: 5px;
+    }
+    .resume a img:hover, :focus {
+        transform: scale(1); 
+      }
+    .skill{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 10rem); 
+        grid-template-rows: repeat(3, 10rem); 
+        grid-gap: 0;
+        justify-content: center; 
+        align-items: center;
+    }
+    .skill img{
+        width: 53%;
+        max-width: 9rem;
+        height: auto;
+        object-fit: contain;
+        justify-self: center;
+        align-self: center;
+    }
+    .project {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .project img {
+        width: 60%
+    }
+}
+
+@media screen and (max-width: 659.99px) and (min-width: 380px ){
+    html {
+        font-size: 14px;
+    }
     body {
         max-width: 100vw;
         overflow-x: hidden;
     }
-    
-    
-    
     #header{
-        font-size:2.5rem;
-        padding: 40px;
-        margin-top: 10%;
+        font-size:3.2rem;
+        
+        
     }
     .navbar .navb{
-        font-size: 30%;
-        /* width: 50px; */
-        padding: 1px;;
-        margin: .75rem;
-        border-radius: 2px;
+        padding: 0 .6rem;
+        margin: 0;
+        border-radius: 4px;
     }
-    .subtitle{
-        font-size: 1.12rem;
+    #subtitle{
+        font-size: 1.5rem;
     }
-    h3{
-        font-size: 1.56rem;
-        padding-bottom: 40px;
-        padding-right: -20%;
-        
+    #about, #resume, #skills, #projects, #contact{
+        text-align: center;
+        font-size: 2rem;    
     }
     .about{
-        font-size: 0.75rem;
-        margin-left: 2.18rem;
-        margin-right: 2.18rem;
+        padding: 10%;
     }
-    .resume{
-        scale: 70%;
-        margin-bottom: 2.5rem;
-        width: auto;
-    }
+    .resume a img {
+        height: 75%; 
+        width: 75%;
+        border: 1px solid rgba(102, 50, 153, 1);
+        border-radius: 5px;
+      }
     .skill{
-        height: fit-content;
-        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 10rem); 
+        grid-template-rows: repeat(3, 10rem); 
+        grid-gap: 0;
+        justify-content: center; 
+        align-items: center;
+        width: 100vw;
     }
     .skill img{
-        padding: 3px;
+        width: 53%;
+        max-width: 9rem;
+        height: auto;
+        object-fit: contain;
+        justify-self: center;
+        align-self: center;
     }
     .project{
-        width: 95%;
-        margin-left: .62rem;
-        padding: 0;
-        
-        
+        width: 100vw;
+        flex-direction: column;    
     }
-
-    .project .img_left {
-        height: 5.6rem;
-        transform-origin: left;
-        
-    }
-
-    .project .img_right {
-        height: 5.6rem;
-        transform-origin: right;
-        
+    .project img {
+        width: 60%
     }
     .contact img{
         padding:1.25rem;
     }
-   
-    div.projectname{
+       div.projectname{
         font-size: .8rem;
-    }
-    
-    
+        margin-bottom: 1.1rem;
+    }   
 }
 
-@media screen and (max-width: 350px) and (min-width: 749px) {
-    
+@media screen and (max-width: 379.99px) and (min-width: 320px) {
+    html {
+        font-size: 13px;
+    }
+    #header{
+        font-size:2.5rem;
+    }
+    .button_container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        transform: rotate(-90deg);
+        position: fixed;
+        top: 42rem;
+        left: 0;
+        transform-origin: top left;
+    }
+    .button_container .navb {
+        margin: .3rem;
+    }
+    .name {
+        margin: 0 2rem 2rem 2rem;
+    }
+    .logo_container .logo {
+        margin-top: 0;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    #about, #resume, #skills, #projects, #contact{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .about {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+        margin: 2rem;
+    }
+    .resume a img {
+        height: 80%; 
+        width: 80%;
+        border: 1px solid rgba(102, 50, 153, 1);
+        border-radius: 5px;
+      }
+    .skill{
+        display: grid;
+        grid-template-columns: repeat(3, 9rem); 
+        grid-template-rows: repeat(3, 9rem); 
+        grid-gap: 0;
+        justify-content: center; 
+        align-items: center;
+        width: 100vw;
+    }
+    .skill img{
+        width: 43%;
+        /* max-width: 9rem; */
+        height: auto;
+        object-fit: contain;
+        justify-self: center;
+        align-self: center;
+    }
+    .project {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact img {
+        height: 4rem;
+        padding: 2rem;
+    }
 }
+
+@media screen and (max-width: 319.99px) {
+    
+    html {
+        font-size: 11px;
+    }
+    #header{
+        font-size:2.5rem;
+        
+    }
+    .button_container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        transform: rotate(-90deg);
+        position: fixed;
+        top: 45rem;
+        left: 0;
+        transform-origin: top left;
+    }
+    .button_container .navb {
+        margin: .3rem;
+    }
+    .name {
+        margin: 0 2rem;
+    }
+    .logo_container .logo {
+        margin-top: 0;
+    }
+    #subtitle{
+        font-size: 1.5rem;
+    }
+    #about, #resume, #skills, #projects, #contact{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .about {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+        margin: 2rem;
+    }
+    .resume a img {
+        height: 80%; 
+        width: 80%;
+        border: 1px solid rgba(102, 50, 153, 1);
+        border-radius: 5px;
+      }
+    .skill{
+        display: grid;
+        grid-template-columns: repeat(3, 7rem); 
+        grid-template-rows: repeat(3, 10rem); 
+        grid-gap: 0;
+        justify-content: center; 
+        align-items: center;
+        width: 100vw;
+    }
+    .skill img{
+        width: 43%;
+        /* max-width: 9rem; */
+        height: auto;
+        object-fit: contain;
+        justify-self: center;
+        align-self: center;
+    }
+    .project {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .projectname {
+        font-size: .8rem;
+    }
+    .contact img {
+        height: 4.5rem;
+        padding: 1.1rem;
+    }
+}
+
+
+
+
