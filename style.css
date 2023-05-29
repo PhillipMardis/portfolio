@@ -13,23 +13,23 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0.5em;
-    height: 0.5em;
+    width: 0.5rem;
+    height: 0.5rem;
   }
 
   ::-webkit-scrollbar-thumb {
-    width: 0.3em;
-    height: 0.3em;
-    background-color: purple;
-    border-radius: 0.25em;
-    padding: 0.2em;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: rgba(102, 50, 153, 1);
+    border-radius: 0.25rem;
+    padding: 0.2rem;
   }
   ::-webkit-scrollbar-track {
-    width: 0.5em;
-    height: 0.5em;
+    width: 0.5rem;
+    height: 0.5rem;
   }
 .purple{
-    color:purple;
+    color:rgba(102, 50, 153, 1);
 }
 
 
@@ -39,14 +39,14 @@ html{
 }
 body{
     margin:0;
-    padding:0;
-    /* display: flex; */
-    justify-content: center;
+    padding:0;                                         /*#f2f2f2, #d3d3d3, #bbbbbb, #a4a4a4,*/
     color: #2f2f2f;
-    
-
-    background: linear-gradient(90deg, #eaeaea, #d3d3d3, #bbbbbb, #a4a4a4);
+    background: radial-gradient(circle at top center,  #d3d3d3, #bbbbbb, #a4a4a4,rgb(102, 50, 153));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100vw;
+    overflow-x: hidden;
     /* -webkit-animation: gradientBackground 15s ease infinite; */
     /* animation: gradientBackground 20s ease infinite; */
 
@@ -64,6 +64,47 @@ body{
     }
   } */
 
+.main {
+    width: 100%;
+}
+
+/*-----------------------------------------------------*/
+/*-------------------RESUME-BLOCK----------------------*/
+/*-----------------------------------------------------*/
+  
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content; 
+    text-align: center;
+  }
+
+  .res_image_container {
+    display: inline-block;
+    height: fit-content;
+  }
+
+  .resume a {
+    background-color: transparent;
+  }
+  
+  .resume a img {
+    height: 30%; 
+    width: 30%;
+    border: 1px solid rgba(102, 50, 153, 1);
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .resume a img:hover, :focus {
+    transform: scale(2.5); 
+  }
+  
+  
+/*--------------------------------------------------------*/
+
 
 .totop {
     position: fixed;
@@ -72,62 +113,119 @@ body{
     bottom: 20px;
     right: 30px;
     background-color: #2f2f2f;
+    border: 1px solid rgba(102, 50, 153, 1);
+    border-radius: 5px;
     color: white;
-
     text-decoration: none;
     text-align: center; line-height: 56px;
-    font-size: 22px;
-    transition: 1s;
+    font-size: 1.35rem;
+    transition: 0.1s;
 }
-.totop:hover, :focus {
-    background-color: purple;
+.totop:hover {
+    background-color: rgba(102, 50, 153, 1);
     color: black;
-    transition: 1s;
-    scale: 1.3;
+    transform: scale(1.3);
+    border: 1px solid #a4a4a4;
 }
+
+/* .totop:active, .totop:focus {
+   
+  transform: scale(1);
+} */
+
 .navbar{
     position: fixed;
-    z-index: 1;
-    /* align-items:center; */
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
     top:0;
 }
-.navbar button {
+
+
+
+.button_container .navb {
     margin:10px;
-    transition: 1s;
+    border: 1px solid rgba(102, 50, 153, 1);
+    color: #2f2f2f;
+    border-radius: 4px;
+    transition: 0.1s;
     cursor: pointer;
 }
 
-.navb:hover, :focus {
-    transform:scale(1.3);
-    transition: 1s;
-    background-color: purple;
+.navbar .navb:hover, 
+.navbar .navb:focus {
+    transform:scale(1.6);
+    transition: 0.1s;
+    background-color: rgba(102, 50, 153, 1);
+    border: 1px solid white;
     color: white;
 }
-.resbutton {
-    scale: 1.8;
-    transition: 1s;
-}
-.resbutton:hover, :focus {
+
+/* .resbutton:hover, :focus {
     transform:scale(1.3);
     transition: 1s;
-    background-color: purple;
+    background-color: rgba(102, 50, 153, 1);
     color: white;
+} */
+
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.logo_container .logo {
+    /* position: fixed; */
+    width: 125px;
+    height: 125px;
+    margin-top: 3rem;;
+    /* top: 20px;
+    left: 30px;  */
+    transition: transform 1s;
+}
+
+.logo_container .logo:hover {
+    transform: scale(1.5) rotate(1turn);
+    /* transform: rotate(-.2turn) */
+    /* animation: bounce 1s; */
+}
+
+/* @keyframes bounce {
+    0% {
+        transform: rotate(0deg);
+      }
+      45% {
+        transform: rotate(400deg);
+      }
+      55% {
+        transform: rotate(380deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+  } */
+
 #header{
     text-align: center;
-    font-size: 120px;
-    font-family: sourceCodeProBold;
+    font-size: 7.5rem;
+    font-family: sourceCodePro;
+    margin-top: 0;
+    
     
 }
 h3{
     text-align: center;
-    font-size: 75px;
+    font-size: 4.68rem;
     
 }
 .subtitle{
     text-align: center;
-    margin-top: -60px;
-    font-size: 50px;
+    margin-top: -3.75rem;
+    font-size: 3.2rem;
 }
 .about{
     text-align: center;
@@ -135,12 +233,13 @@ h3{
     padding-right: 20%;
     padding-bottom: 20px;
     /* margin-top: -40px; */
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .skill{
     
     display: flex;
-    height: 150px;
+    
+    height: 9.37;
     justify-content: center;
 
 }
@@ -149,17 +248,23 @@ h3{
     /* max-height:70%; */
     height: auto;
     object-fit: contain;
-    padding: 1.5em
+    padding: 1.5rem;
+    transition: transform 0.1s;
 }
+
+.skill img:hover {
+    transform: scale(1.3);
+}
+
 .contact{
     display: flex;
-    height:100px;
-    justify-content:space-around;
-    margin-left: 150px;
-    margin-right: 150px;
+    height: 6.25rem;
+    justify-content: space-around;
+    margin-left: 9.37rem;
+    margin-right: 9.37rem;
 }
 .contact img{
-    transition: 1s;
+    transition: transform 0.1s;
     cursor: pointer;
     height: auto;
     object-fit: contain;
@@ -169,17 +274,13 @@ h3{
     display: inherit;
 }
 .contact img:hover, :focus{
-    transform: scale(1.2);
+    transform: scale(1.3);
     
 } 
 .emailandphone{
     text-align: center;
-    margin-bottom: 3em;
-    font-size: 1.5em;
-}
-.name{
-    
-    margin-top: -40px; 
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
 }
 
 .resbutton{
@@ -188,54 +289,62 @@ h3{
 
 .project{
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     text-align: center;
+    /* width: fit-content; */
     
 
 }
 .project img{
-    height: 250px;
-    transition: 1s;
-    /* margin: 30px; */
-    
+    height: 15.6rem;
+    margin: 0 5rem 0 5rem;
+    transition: 0.3s;
+    border: 1px solid rgba(102, 50, 153, 1);
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 .project img:hover, :focus{
-    transform: scale(1.5);
-    transition: 1s;
-}
+    transform: scale(1.7);
+    }
+
+/*-----------------------------------------------------*/
+/*------------------MOBILE-DEVICES---------------------*/
+/*-----------------------------------------------------*/
 
 @media screen and (max-width: 600px){
     #header{
-        font-size: 25px;
+        font-size:2.5rem;
         padding: 40px;
         margin-top: 10%;
     }
     .navbar{
         
     }
-    .navbar button{
+    .navbar .navb{
         font-size: 30%;
-        width: 50px;
-        padding:0;
-        margin:0;
+        /* width: 50px; */
+        padding: 1px;;
+        margin: .75rem;
+        border-radius: 2px;
     }
     .subtitle{
-        font-size: 18px;
+        font-size: 1.12rem;
     }
     h3{
-        font-size: 25px;
+        font-size: 1.56rem;
         padding-bottom: 40px;
         padding-right: -20%;
         
     }
     .about{
-        font-size: 12px;
-        margin-left: 35px;
-        margin-right: 35px;
+        font-size: 0.75rem;
+        margin-left: 2.18rem;
+        margin-right: 2.18rem;
     }
     .resume{
         scale: 70%;
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
         width: auto;
     }
     .skill{
@@ -247,22 +356,29 @@ h3{
     }
     .project{
         width: 95%;
-        margin-left: 10px;
+        margin-left: .62rem;
         padding: 0;
+        
         
     }
 
-    .project img{
-        height: 90px;
+    .project .img_left {
+        height: 5.6rem;
+        transform-origin: left;
         
+    }
+
+    .project .img_right {
+        height: 5.6rem;
+        transform-origin: right;
         
     }
     .contact img{
-        padding:20px;
+        padding:1.25rem;
     }
    
     div.projectname{
-        font-size: 13px;
+        font-size: .8rem;
     }
     
     

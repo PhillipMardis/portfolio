@@ -14,33 +14,71 @@
   <body>
     <div class="main">
       <nav class="navbar">
-        <!-- <a href="#"><button class="navb">home</button></a> -->
-        <a href="#about"><button class="navb">about me</button></a>
-        <a href="#skills"><button class="navb">skills</button></a>
-        <a href="#projects"><button class="navb">projects</button></a>
-        <a href="#contact"><button class="navb">contact</button></a>
-        <a href="Phillip_Mardis_Resume.pdf" target="_blank"
-          ><button class="navb">my resume</button></a
-        >
+        <div class="button_container">
+          <a href="#about"><button class="navb">ABOUT ME</button></a>
+          <a href="#resume"><button class="navb">RESUME</button></a>
+          <a href="#skills"><button class="navb">SKILLS</button></a>
+          <a href="#projects"><button class="navb">PROJECTS</button></a>
+          <a href="#contact"><button class="navb">CONTACT</button></a>
+        </div>
       </nav>
       <div class="name">
+        <div class="logo_container">
+          <img src="images/signature.png" alt="Logo" class="logo" />
+        </div>
         <h1 id="header">Phillip <span class="purple">Mardis</span></h1>
         <p class="subtitle">
-          Future software <span class="purple">developer</span>
+          Full Stack software <span class="purple">developer</span>
         </p>
       </div>
       <div>
-        <h3 id="about">About <span style="color: purple">me</span></h3>
+        <h3 id="about">About <span class="purple">me</span></h3>
         <p class="about">
-          Hi, I'm Phillip! Being a full-stack software developer has always been
-          a dream of mine, as I enjoy the journey of creating and solving the
-          puzzles/problems during back-end development as well as the endless
-          levels of creativity and artistic freedom front-end development
-          allows.
+          Hi, I'm Phillip, a newly established full stack developer who is
+          creative, motivated, and ready to integrate into a team of like-minded
+          developers and engineers. I consider myself to be a people person who
+          thrives in a group setting and always loves a challenge. I possess an
+          uncommonly strong work ethic and I believe in adhering to the
+          guidelines set forth by the company that I'm working for. I'm most
+          comfortable in a professional setting where perceptions, reputations
+          and standards matter.
+        </p>
+        <p class="about">
+          My core competencies include delivering high-performance, low-cost
+          back end solutions for browser, server, and database as well as
+          designing creative, dynamic, and easy to use front end UIs to create
+          effortless and memorable end user experiences. I'm fluent in Python
+          and Javascript(back end), and more than competent using Java, as well
+          as, very comfortable working with the Django Stack. I'm also adept at
+          using HTML5, CSS3, and Javascript(front end) along with Bootstrap plus
+          newer, more flexible, unstyled component libraries like Reach and
+          Headless to create seamless integration of elements while maintaining
+          functionality and accessability.
+        </p>
+        <p class="about">
+          Along with my diverse and ever-expanding software development skills,
+          I study the principles and methodologies of project management, which
+          I've utilized to become a better, more productive team member, with of
+          my key strengths being communication, both verbal and written. I'm
+          comfortable working inside different project organizational
+          structures, with a big emphasis on the Agile framework and Scrum
+          implementation. I'm flexible and adaptable, and I learn quickly,
+          enabling me to shift into a variety of roles to suit the ever-changing
+          needs of a project.
         </p>
       </div>
+
+      <div class="resume">
+        <h3 id="resume">My Res<span class="purple">ume</span></h3>
+        <div class="res_image_container">
+          <a href="images/Phillip_Mardis_Resume_III.pdf" target="_blank">
+            <img src="images/Phillip_Mardis_Resume_III-1.png" alt="Resume" />
+          </a>
+        </div>
+      </div>
+
       <div class="skills">
-        <h3 id="skills">Ski<span class="purple">lls</span></h3>
+        <h3 id="skills">Skil<span class="purple">ls</span></h3>
         <p class="skill">
           <img src="images/python.png" alt="" />
           <img src="images/html.png" alt="" />
@@ -48,19 +86,21 @@
           <img src="images/js.png" alt="" />
           <img src="images/bootstrap.png" alt="" />
           <img src="images/django.png" alt="" />
-          <img src="images/java.png" alt="" />
-          <img src="images/sql.png" alt="" />
           <img src="images/spring.png" alt="" />
+          <img src="images/java.png" alt="" />
+
+          <img src="images/sql.png" alt="" />
         </p>
       </div>
+
       <div>
-        <h3 id="projects">Proj<span class="purple">ects</span></h3>
+        <h3 id="projects">Proje<span class="purple">cts</span></h3>
         <div class="project">
           <div>
             <a
               href="https://replit.com/@PhilipM5/unit-1-project-1?v=1"
               target="_blank"
-              ><img src="images/randmescape.jpg" alt=""
+              ><img class="img_left" src="images/randmescape.jpg" alt=""
             /></a>
             <div class="projectname">Rick and Morty Escape Room(Python)</div>
           </div>
@@ -68,7 +108,7 @@
             <a
               href="https://replit.com/@PhilipM5/BCCA-Budget-Tracker-2?v=1"
               target="_blank"
-              ><img src="images/blap.png" alt=""
+              ><img class="img_right" src="images/blap.png" alt=""
             /></a>
             <div class="projectname">BCCA GI Budget Tracker(Python)</div>
           </div>
@@ -83,9 +123,6 @@
         </div>
 
         <p class="contact">
-          <!-- <a href="mailto:p.l.mardis@gmail.com" target="_blank"
-            ><img src="images/gmail.png" alt=""
-          /></a> -->
           <a
             href="https://www.linkedin.com/in/phillip-mardis-a042a6261/"
             target="_blank"
