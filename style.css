@@ -417,17 +417,17 @@ body{
         font-size: 13px;
     }
     #header{
-        font-size:2.5rem;
+        font-size:2.4rem;
     }
     .button_container {
         display: flex;
         align-items: center;
         width: 100%;
         height: auto;
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
         position: fixed;
-        top: 42rem;
-        left: 0;
+        top: 0rem;
+        left: 2rem;
         transform-origin: top left;
     }
     .button_container .navb {
@@ -499,10 +499,10 @@ body{
         align-items: center;
         width: 100%;
         height: auto;
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
         position: fixed;
-        top: 45rem;
-        left: 0;
+        top: 0rem;
+        left: 2rem;
         transform-origin: top left;
     }
     .button_container .navb {
@@ -515,7 +515,7 @@ body{
         margin-top: 0;
     }
     #subtitle{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     #about, #resume, #skills, #projects, #contact{
         text-align: center;
